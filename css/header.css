@@ -1,0 +1,96 @@
+.header{
+    display: grid;
+    margin: 0 auto;
+    gap: 20px;
+    
+    grid-template-areas: 
+      "nav  figure   ."
+      ".    text"
+      "slider slider"
+    ;
+
+  }
+
+
+.paragraph{
+&::before{
+    color:#fff;
+ }
+  margin: 1em;
+}
+  
+.slider{
+    grid-area: slider;
+}
+  .nav{
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    margin-right: 50px;
+  }
+  
+  .picture{
+    grid-area: figure;
+    align-self: center;
+    gap: 10px;
+   
+  
+  }
+  .nav .nav__link{
+    text-decoration: none;
+    color: #000;
+    padding-top: 20px;
+    font-size: 1.3rem;
+    
+  }
+  
+  .nav__link::before{
+  
+      content: "";
+      display: block;
+      background:slateblue;
+      width: 120%;
+      height: 100%;
+      max-height: 1000px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      clip-path: var(--clippy);
+      transition: clip-path 2s;
+      overflow: hidden;
+  
+  }
+
+ 
+   
+  
+  
+  .nav__link:hover::before{
+    --clippy: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+    color: #fff ;
+  
+  }
+
+  .nav--git::before{
+    background-color: crimson;
+    color: #fff;
+  }
+  
+  .nav--cv::before{
+    background-color: #ff8800;
+    color: #fff;
+  }
+  
+  .nav .nav--celu::before{
+    background-color: steelblue;
+    color: #fff;
+  }
+  
+  .picture .picture__img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 1px solid #000;
+  }
