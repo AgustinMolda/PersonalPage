@@ -1,12 +1,24 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root{
+  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
 .header{
     display: grid;
     margin: 0 auto;
     gap: 20px;
-    
+    width: 100%;
     grid-template-areas: 
-      "nav  figure   ."
-      ".    text"
-      "slider slider"
+      "nav  figure   "
+      "    text"
     ;
 
   }
@@ -19,14 +31,14 @@
   margin: 1em;
 }
   
-.slider{
-    grid-area: slider;
+.paragraph{
+    grid-area: text;
 }
   .nav{
     grid-area: nav;
     display: flex;
     flex-direction: column;
-    width: 1000px;
+    width: 100%;
     margin-right: 50px;
   }
   
@@ -45,14 +57,12 @@
     
   }
   
-  .nav__link::before{
-  
+   .nav__link::before{
       content: "";
       display: block;
       background:slateblue;
       width: 120%;
       height: 100%;
-      max-height: 1000px;
       position: absolute;
       top: 0;
       left: 0;
@@ -60,6 +70,7 @@
       clip-path: var(--clippy);
       transition: clip-path 2s;
       overflow: hidden;
+      color: #fff;
   
   }
 
@@ -94,3 +105,5 @@
     border-radius: 50%;
     border: 1px solid #000;
   }
+
+  

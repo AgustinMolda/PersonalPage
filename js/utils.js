@@ -1,5 +1,6 @@
 utils = {
     formulario: () => {
+        
         const main = document.querySelector("#cargaDinamica");
 
         main.innerHTML = `<form action="mailto:agusting.moldavsky@gmail.com" method="post" enctype="text/plain">
