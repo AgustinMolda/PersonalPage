@@ -16,12 +16,8 @@
     margin: 0 auto;
     gap: 20px;
     width: 100%;
-    grid-template-areas: 
-      "nav  figure   "
-      "    text"
-    ;
-
-  }
+    max-height: 850px;
+}
 
 
 .paragraph{
@@ -54,6 +50,7 @@
     color: #000;
     padding-top: 20px;
     font-size: 1.3rem;
+    display: flex;
     
   }
   
