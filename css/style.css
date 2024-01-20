@@ -7,13 +7,12 @@
 }
 
 
-:root{
-    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
-}
+
 
 .slider {
   display: flex;
   overflow-x: scroll;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   height: 100vh;
@@ -71,7 +70,7 @@
     flex: 0 0 100%;
     scroll-snap-align: start;
     animation: slide 12s alternate 2;
-    background-color: aqua;
+    
 
     @media screen {
       @media(width < 617px) {
@@ -145,4 +144,4 @@
 
 }
 
-/*Modificaciones nuevas*/
+
