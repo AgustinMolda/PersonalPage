@@ -59,7 +59,7 @@
       display: block;
       background:slateblue;
       width: 120%;
-      height: 100%;
+      height: 37%;
       position: absolute;
       top: 0;
       left: 0;
@@ -101,6 +101,12 @@
     height: 250px;
     border-radius: 50%;
     border: 1px solid #000;
+  }
+
+  @media only screen and(max-width:500px) {
+    .nav__link::before{
+      height: 10%;
+    }
   }
 
   
